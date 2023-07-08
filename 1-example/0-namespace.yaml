@@ -1,0 +1,9 @@
+---
+# in staging namespace we will put all of the finel deployment
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: staging
+  labels:
+    monitoring: prometheus
+    istio-injection: enabled # automaticly create and `bind` envoy to pod  
