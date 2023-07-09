@@ -5,5 +5,4 @@ kind: Namespace
 metadata:
   name: staging
   labels:
-    monitoring: prometheus
     istio-injection: enabled # automaticly create and `bind` envoy to pod  

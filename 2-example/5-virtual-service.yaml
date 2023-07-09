@@ -1,0 +1,25 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: second-app
+  namespace: production
+spec:
+  hosts:
+    - app.devopsbyexample.com #external dns name - outside the cluster
+    - second-app #internal dns name - inside the cluster
+  gateways:
+    - api #istio gateway
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: second-app
+            subset: v1
+          weight: 10
+        - destination:
+            host: second-app
+            subset: v2
+          weight: 90
