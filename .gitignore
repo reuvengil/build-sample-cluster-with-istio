@@ -31,6 +31,8 @@ override.tf.json
 
 # Ignore CLI configuration files
 .terraformrc
+.terraform.*
+.terraform/
 terraform.rc
 #personal files
 # minikube-commands.md

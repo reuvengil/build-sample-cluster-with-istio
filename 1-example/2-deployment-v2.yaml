@@ -18,7 +18,7 @@ spec:
         istio: monitor
     spec:
       containers:
-        - image: aputra/myapp-lesson155:latest
+        - image: giler053/myapp:latest
           imagePullPolicy: Always
           name: first-app
           env:
