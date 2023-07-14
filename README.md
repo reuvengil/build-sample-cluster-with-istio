@@ -1,11 +1,6 @@
 # Create Sample Cluster with Istio Using Helm and Terraform
 
 1. To build a cluster with Istio using **Helm** and **Terraform**, follow these steps:
-    Build the myapp docker image:
-    ```
-    sudo chmod +x build.sh
-    sudo ./build.sh
-    ```
    - If you are using **minikube**, run the following command to create the cluster with the required resources for Istio:
      ```
      minikube start --memory=16384 --cpus=4 --nodes 3 --network-plugin=cni --cni=calico --kubernetes-version=v1.26.1
